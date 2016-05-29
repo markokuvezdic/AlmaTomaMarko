@@ -1,0 +1,37 @@
+
+  bank=read.table("C:\\Users\\Toma Pasariæ\\Desktop\\bank.txt",header=T)
+  x=as.matrix(bank[,2:9])
+  n=nrow(x)
+  p=ncol(x)
+  xs=scale(x)
+  r=cov(xs)
+  e=eigen(r)
+  values=e$values
+  values
+  vectors=e$vectors
+  perc=values/sum(values)
+  cumperc=cumsum(perc)
+  table=cbind(values,perc,cumperc)
+  plot(values,xlab="index",ylab="eigenvalues",main="screeplot",lwd=2,cex=2,col="blue")
+  abline(h=1)
+  z=xs%*%vectors
+  r1=cor(cbind(z,xs))
+  comp2=r1[9:16,1:2]
+  comp2
+  ucircle=cbind(cos((0:360)/180*pi),sin((0:360)/180*pi))
+  plot(ucircle,typ="l",lty="solid",col="blue",xlab="PC1",ylab="PC2",cex.lab=1.2, cex.axis=1.2,lwd=2)
+  plot(ucircle,typ="l",lty="solid",col="blue",xlab="PC1",ylab="PC2",cex.lab=1.2, cex.axis=1.2,lwd=2,asp=1)
+  abline(h=0,v=0)
+  label=c("RBDP","Inflation","Unemployment","Debt","ROA","ROE","Capital","Foreign")
+  text(comp2,label,cex=1.2)
+  common=diag(comp2%*%t(comp2))
+  specific=diag(r)-common
+  rot=varimax(comp2)
+  rot
+  rotloadings=rot$loadings
+  fa=xs%*%solve(r)%*%comp2
+  rotfa=xs%*%solve(r)%*%rotloadings
+  plot(fa,type="n",xlab="factor scores 1",ylab="facotr scores 2",main="Representation of individuals before rotation", cex.lab=1.2,cex.axis=1.2,lwd=2)
+  abline(h=0,v=0)
+  text(fa,c("Croatia","Slovenia","Serbia","Romania","Bulgaria","Hungary","Bosnia","Albania","Slovakia"),cex=1.2)
+  
