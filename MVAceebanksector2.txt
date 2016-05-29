@@ -1,5 +1,5 @@
 
-  bank=read.table("C:\\Users\\Toma Pasariæ\\Desktop\\bank.txt",header=T)
+  bank=read.table("C:\\Users\\Toma PasariÃ¦\\Desktop\\bank.txt",header=T)
   x=as.matrix(bank[,2:9])
   n=nrow(x)
   p=ncol(x)
