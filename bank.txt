@@ -1,0 +1,10 @@
+Country	RBDP	Inflation	Unemployment	Debt	ROA	ROE	Capital	Foreign
+Croatia	-0.4	-0.2	17.1	85	0.6	3.3	21.4	88
+Slovenia	2.6	0.2	9.7	80	0.4	3.8	15.8	31
+Serbia	-1.8	2.9	22	69	1	5	20.4	75
+Romania	2.9	1.1	6.8	39.6	-1.3	-12.5	17.6	90
+Bulgaria	1.7	-1.4	11.4	94.2	0.9	6.9	21.9	76
+Hungary	3.6	-0.2	7.7	76.9	1.3	13.2	17	83
+Bosnia	0.5	-0.9	27.5	45	0.2	1.3	17.8	90
+Albania	2.4	1.6	18	72	0.5	6.4	18	89
+Slovakia	2.4	0.1	13.2	54.1	0.9	10.9	17.2	99
