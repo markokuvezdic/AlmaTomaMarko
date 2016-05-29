@@ -2,7 +2,7 @@
 Factor Analysis of CEE Banking Sector
 Name of QuantLet : MVAceebanksector
 
-Description : 'Performs a factor analysis for the CEE Banking Sector for economic and banking indicators data and shows the eigenvalues of r-psi and a plot for two factors.'
+Description : 'Performs a principal component factor analysis for the CEE Banking Sector using economic and banking indicators data and shows a plot for two factors.'
 
 Keywords : 'eigenvalues, factor, factor analysis, data
 visualization, plot, graphical representation'
